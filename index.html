@@ -3,126 +3,136 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f3ea">
-<title>高性价比人生指南｜家庭手机版</title>
+<meta name="theme-color" content="#f7f4ed">
+<title>高性价比人生指南｜我们家版</title>
 <style>
-:root{--bg:#f7f3ea;--card:#fffdf8;--ink:#25231f;--muted:#716c62;--line:#ddd6c8;--accent:#6b5b45;--accent2:#efe7d9;--ok:#426b4b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:18px}
-body.big{font-size:21px}.wrap{max-width:860px;margin:auto;padding:18px 14px 60px}.hero{padding:18px 4px 10px}.hero h1{font-size:1.65em;line-height:1.25;margin:0 0 8px}.hero p{margin:6px 0;color:var(--muted)}
-.toolbar{position:sticky;top:0;z-index:20;background:rgba(247,243,234,.96);backdrop-filter:blur(8px);padding:10px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:8px}
-.search{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}.btn{font:inherit;border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 13px;cursor:pointer;color:var(--ink)}
-.status{margin:14px 0;padding:13px 14px;border-radius:12px;background:var(--accent2);color:var(--muted)}
-h2{font-size:1.3em;margin:28px 0 12px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.toc button{text-align:left;font:inherit;line-height:1.35;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);cursor:pointer;color:var(--ink)}.toc button.active{border-color:var(--accent);background:var(--accent2)}
-.chapterHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:28px}.chapterHead h2{margin:0}.small{font-size:.85em;color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}.card h3{font-size:1.12em;line-height:1.45;margin:0 0 12px}.row{margin:9px 0}.label{display:inline-block;min-width:4.8em;font-weight:700;color:var(--accent)}.plain{font-size:1.04em}.benefit{padding:10px 12px;background:#f3f7f1;border-left:4px solid var(--ok);border-radius:8px}
-details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:44px;display:flex;align-items:center}.detail{font-size:.92em;color:#4e4a43}.detail .row{margin:10px 0}.source a{word-break:break-all}
-.toplink{display:inline-block;margin-top:8px;color:var(--accent)}.empty{padding:26px;text-align:center;color:var(--muted)}
-.footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.85em;color:var(--muted)}
-@media(max-width:560px){.wrap{padding:12px 10px 48px}.toc{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr auto}.card{padding:14px;border-radius:14px}.hero h1{font-size:1.48em}}
+:root{--bg:#f7f4ed;--card:#fff;--text:#222;--muted:#6a625b;--line:#e5ddd1;--accent:#6b4f3a;--accent-bg:#efe7dc;--green:#2f6b4f;--amber:#8a5a14;--base:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:var(--base);line-height:1.68}body.large{--base:21px}a{color:#315f85;word-break:break-all}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:920px;margin:auto;padding:0 15px 80px}.hero{padding:26px 0 14px}.eyebrow{font-size:.82em;color:var(--muted)}h1{font-size:1.65em;line-height:1.25;margin:.25em 0 .45em}.lead{margin:0;color:#46413c}.privacy{margin:14px 0;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:.9em;color:#554d46}.priority{margin:16px 0;padding:14px 15px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.priority b{color:#765018}.priority ol{margin:8px 0 0;padding-left:1.3em}.toolbar{position:sticky;top:0;z-index:20;background:rgba(247,244,237,.96);backdrop-filter:blur(9px);padding:9px 0;border-bottom:1px solid var(--line)}.toolbar-row{display:grid;grid-template-columns:1fr auto;gap:8px}.search{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;min-height:46px}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:12px;padding:9px 13px;min-height:46px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.86em}.chip.active{background:var(--accent-bg);border-color:#ccb9a6}.status{margin:12px 0;padding:11px 13px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:.9em}.section-title{font-size:1.22em;margin:25px 0 10px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.toc a{text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px;display:flex;gap:9px;align-items:flex-start}.toc .icon{font-weight:800;color:var(--accent);min-width:1.8em}.group{scroll-margin-top:114px;margin-top:28px}.group-head{border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:10px}.group-head h2{font-size:1.35em;margin:0}.group-intro{margin:5px 0 0;color:var(--muted);font-size:.92em}.entry{background:#fff;border:1px solid var(--line);border-radius:16px;margin:11px 0;overflow:hidden}.entry-main{padding:14px}.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:7px}.badge{font-size:.78em;font-weight:750;padding:3px 8px;border-radius:999px;background:var(--accent-bg);color:var(--accent)}.source-no{font-size:.78em;color:var(--muted)}.entry-title{font-weight:780;font-size:1.06em;line-height:1.45}.family-note{margin:10px 0;background:#f6f0e8;border-radius:11px;padding:9px 11px}.family-note strong{color:var(--accent)}.field{display:grid;grid-template-columns:4.8em 1fr;gap:8px;margin:8px 0}.label{font-weight:700;color:#5b5148}.plain{background:#f8f5ef;border-radius:11px;padding:9px 11px;margin:9px 0}.detail-toggle{width:100%;border:0;border-top:1px solid var(--line);background:#faf8f4;padding:11px 14px;text-align:left;font-weight:700;color:#4b433c}.details{display:none;padding:10px 14px 14px;border-top:1px solid var(--line);background:#fdfcf9}.entry.open .details{display:block}.evidence{display:inline-flex;min-width:2.1em;justify-content:center;padding:1px 8px;border-radius:999px;font-weight:800;background:#e9f3ec;color:var(--green)}.evidence.B{background:#fff3dc;color:var(--amber)}.evidence.C{background:#eee;color:#555}.footer{margin-top:30px;color:var(--muted);font-size:.86em;border-top:1px solid var(--line);padding-top:14px}.no-results{display:none;text-align:center;color:var(--muted);padding:30px}.back{position:fixed;right:13px;bottom:16px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;text-decoration:none;color:var(--text)}
+@media(max-width:600px){.toc{grid-template-columns:1fr}.field{grid-template-columns:1fr;gap:1px}.toolbar-row{grid-template-columns:1fr auto}}
 </style>
 </head>
-<body>
+<body id="top">
 <div class="wrap">
-  <section class="hero">
-    <h1>高性价比人生指南｜家庭手机版</h1>
-    <p>先看目录，再看“成本、说人话、收益”。需要核对时，再展开证据、来源和备注。</p>
-    <p class="small">内容来自公开项目 HowToLiveBetter。网页每次打开会读取该项目最新中文正文。</p>
-  </section>
-  <div class="toolbar">
-    <input id="q" class="search" type="search" placeholder="搜索：血压、牙齿、老人、睡眠……" aria-label="搜索">
-    <button id="fontBtn" class="btn" type="button">大字</button>
-  </div>
-  <div id="status" class="status">正在加载内容，请稍候……</div>
-  <section id="tocSec">
-    <h2>目录</h2>
-    <div id="toc" class="toc"></div>
-  </section>
-  <section id="content"></section>
-  <div class="footer">
-    本页仅用于家庭查阅与信息整理，不替代医生、律师或其他专业人士的个别判断。原项目内容会更新；具体政策、价格和医疗建议请以所在地最新官方信息为准。
-  </div>
+<section class="hero">
+<div class="eyebrow">家庭专用 · 匿名版</div>
+<h1>高性价比人生指南｜我们家版</h1>
+<p class="lead">从原资料中只保留目前与我们家直接相关、或很快会用到的内容。</p>
+<div class="privacy">隐私处理：不显示姓名、生日、住址、具体收入和具体负债金额。页面只保留年龄段、健康状态和行动重点。</div>
+<div class="priority"><b>当前家庭优先顺序</b><ol>
+<li>先控制信用卡循环负债，不让债务继续滚大</li>
+<li>爸爸继续把血压控制住；尿酸先分清“单纯高尿酸”还是“已确诊痛风”</li>
+<li>妈妈完成幽门螺杆菌治疗，并把51岁应做的筛查排上</li>
+<li>江西租住房先检查燃气、烟雾报警器和基础应急用品</li>
+<li>Mooty继续小规模验证，但创业资金不动家庭安全垫</li>
+</ol></div>
+</section>
+<div class="toolbar">
+<div class="toolbar-row"><input id="search" class="search" type="search" placeholder="搜索：血压、近视、信用卡、幽门……"><button id="large" class="btn" type="button">大字</button></div>
+<div class="filters"><button class="chip active" data-ev="all" type="button">全部证据</button><button class="chip" data-ev="A" type="button">A</button><button class="chip" data-ev="B" type="button">B</button><button class="chip" data-ev="C" type="button">C</button></div>
 </div>
+<div id="status" class="status">正在读取原资料最新内容……</div>
+<h2 class="section-title">目录</h2><nav id="toc" class="toc"></nav>
+<main id="content"></main><div id="noResults" class="no-results">没有找到匹配内容</div>
+<div class="footer">内容筛选自《高性价比人生指南》公开项目。家庭说明是根据当前家庭情况做的整理；原资料没有覆盖或没有直接比较的事项（例如 LASIK 与 ICL、种植牙与牙桥、更年期暴汗的具体治疗），本页不会自行补结论。医疗事项仍以医生诊断和复查为准。</div>
+</div><a class="back" href="#top">↑ 顶部</a>
 <script>
 (()=>{
 const API='https://api.github.com/repos/eternity4719/HowToLiveBetter/contents/book';
-const q=document.getElementById('q'),toc=document.getElementById('toc'),content=document.getElementById('content'),status=document.getElementById('status');
-let chapters=[], active=0, query='';
-const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const fmt=s=>{
-  let x=esc(s||'').replace(/\n/g,'<br>');
-  x=x.replace(/(https?:\/\/[^\s<)）]+[^\s<.,;:!?，。；：！？)）])/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
-  return x;
-};
+const cfg=[
+{id:'now',title:'现在马上处理',icon:'①',intro:'先做最影响家庭安全、现金流和长期健康的事。',items:[
+['05-07','家庭财务｜优先','家庭存在信用卡循环负债。先把每张卡的本金、利率/手续费、到期日列清楚，避免继续靠最低还款或新增消费贷把债务越滚越大。'],
+['01-07','爸爸｜继续','已经每天服降压药、目前控制尚可：继续按医嘱服药并持续量血压，不自行停药。'],
+['01-04','江西家里｜检查','家里租住小区住宅并使用燃气做饭：先检查燃气软管、灶具年限，不自行改管道。'],
+['01-03','江西家里｜检查','确认家里是否已有能正常工作的烟雾报警器；如果存在燃气取暖等一氧化碳风险，再考虑一氧化碳报警器。'],
+['01-26','全家｜准备','补齐基础灭火、逃生和急救用品，并设一个每年检查日。'],
+['14-01','全家｜账户安全','邮箱、支付和社交账号开启二次验证，尤其是父母常用的支付账号。']]},
+{id:'dad',title:'爸爸｜59岁',icon:'爸',intro:'重点：高血压持续控制、尿酸问题分清“高尿酸”和“痛风”、到年龄的癌症筛查。',items:[
+['01-07','高血压｜继续','目前已经每天吃药且控制尚可，维持当前治疗和监测。'],
+['02-12','血压/血脂｜长期','如果医生判断需要降压或降脂药，按医嘱规律吃，不因指标好转自行停。'],
+['06-19','尿酸｜先分情况','如果只是体检查出尿酸高、从没痛风发作，原指南不支持仅因为这个数字就自行开始降尿酸药。'],
+['16-09','尿酸｜条件项','如果已经被医生明确诊断为痛风，则属于另一条路径：长期达标治疗。是否属于这一类，需要按医生诊断。'],
+['01-19','筛查｜现在可做','59岁已在结直肠癌筛查年龄范围内。'],
+['01-21','疫苗｜可安排','50岁以后可考虑带状疱疹疫苗。'],
+['01-23','幽门螺杆菌｜已处理','已经完成治疗。原资料强调阳性要根除；治疗后的具体复查按医生安排。'],
+['02-01','戒烟｜已做到','以前吸烟，现在已经戒烟。这一项继续保持。'],
+['01-13','60岁后｜准备','进入60岁阶段后，可把平衡和腿部力量、浴室/楼梯防跌倒纳入重点。'],
+['01-22','65岁后｜未来','65岁以后再把肺炎球菌疫苗列入待办。']]},
+{id:'mom',title:'妈妈｜51岁',icon:'妈',intro:'重点：幽门螺杆菌疗程、更年期阶段的基础健康管理，以及乳腺/宫颈/结直肠癌筛查。原资料没有系统讲更年期暴汗本身，因此这里不自行补结论。',items:[
+['01-23','幽门螺杆菌｜进行中','目前正在治疗：按医生方案把疗程完成，不自行减药或停药。'],
+['01-17','筛查｜现在可做','40岁以后已经进入乳腺癌筛查年龄范围。'],
+['01-18','筛查｜现在可做','30岁以上女性可做宫颈癌筛查，原资料优先列HPV检测。'],
+['01-19','筛查｜现在可做','51岁已进入结直肠癌筛查年龄范围。'],
+['28-07','更年期｜条件项','如果因为更年期症状考虑性激素治疗，原资料只支持在医生开方、并定期复查的前提下使用；不要网购或自行加量。'],
+['02-14','运动｜长期','把快走等中等强度运动逐步做到每周累计150–300分钟。'],
+['02-17','力量｜长期','每周增加30–60分钟力量训练。'],
+['02-13','睡眠｜长期','保持大约7小时睡眠和相对固定作息。']]},
+{id:'me',title:'我｜34岁',icon:'我',intro:'重点：牙齿修复、近视决策、LDL和运动，以及Mooty创业资金与家庭资金隔离。',items:[
+['02-10','牙齿｜正在处理','正在做根管治疗，未来若拔牙，原资料的上位原则是“缺牙及时补”。它没有比较种植牙和牙桥。'],
+['30-06','近视｜理解风险','近视度数本身与部分长期眼病风险相关。屈光手术解决的是视力矫正，不应把它理解为把近视结构性风险清零。'],
+['06-16','近视｜别花冤枉钱','不要把防蓝光眼镜当作保护眼底或治疗近视的办法。'],
+['30-09','近视｜避坑','不买宣称“治愈近视”“降低度数”的产品或服务。原资料没有直接比较LASIK和ICL，因此手术选择仍需根据眼科检查单独判断。'],
+['02-11','运动｜优先','目前运动量不足：可以先把日常步数往7000–8000步靠。'],
+['02-14','运动｜长期','逐步做到每周150–300分钟中等强度运动。'],
+['02-17','力量｜长期','每周30–60分钟力量训练。'],
+['02-28','饮食｜长期','每天吃够约400克水果蔬菜。'],
+['02-12','LDL｜条件项','LDL较高；是否需要药物由医生结合整体风险判断。如果已经开药，不自行停。'],
+['12-01','Mooty｜资金纪律','Mooty刚起步，创业投入只使用“全亏光也不影响生活、看病和家庭安全”的钱。'],
+['05-27','个人财务｜先筑底','在扩大创业投入前，先保留随时可用的应急金。']]},
+{id:'sis',title:'妹妹｜23岁',icon:'妹',intro:'当前已知重点是近视；同时保留年轻女性最直接的预防项目。',items:[
+['30-06','近视｜长期','近视不是只配眼镜就结束，度数越深，部分长期眼病风险越高。'],
+['30-09','近视｜避坑','不买宣称“治愈近视”“降低度数”的产品或服务。'],
+['06-16','用眼｜避坑','防蓝光镜片没有可靠证据证明能保护眼底。'],
+['01-16','HPV疫苗｜值得核对','23岁仍属于原资料所引用研究中有明确获益数据的年龄段；先确认是否已经完成接种。'],
+['02-10','口腔｜基础','认真刷牙、每天清一次牙缝，出现缺牙及时修复。'],
+['02-14','运动｜基础','维持规律运动。']]},
+{id:'money',title:'我们家的钱',icon:'¥',intro:'目前的顺序：先控制循环负债 → 建立应急金 → 只保大风险保险 → Mooty与家庭资金隔离 → 买房以后再评估。',items:[
+['05-07','第一优先｜负债','家庭现在存在信用卡轮刷。原资料明确反对最低还款、消费分期和消费贷，因为利息会吃掉现金流。'],
+['05-27','第二步｜应急金','负债结构稳定后，逐步存出3–6个月固定生活费的应急金，放在随时可取的位置。'],
+['05-40','保险｜原则','只给家庭自己扛不住的损失买保险；小损失用应急金解决。'],
+['05-41','保险｜条件项','如果家里明显依赖某一个人的收入，可以再评估给主要挣钱者配置定期寿险。'],
+['12-01','创业｜Mooty','创业资金与家庭生活资金分开；不借钱扩张，不动家庭安全垫。'],
+['05-16','投资｜底线','家庭还有循环负债阶段，不借钱投资、不加杠杆。']]}
+];
+const q=document.getElementById('search'),toc=document.getElementById('toc'),content=document.getElementById('content'),status=document.getElementById('status'),no=document.getElementById('noResults');let ev='all',book=new Map();
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=s=>esc(s||'').replace(/(https?:\/\/[^\s<)）]+[^\s<.,;:!?，。；：！？)）])/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
 function parse(text,file){
-  const lines=text.replace(/\r/g,'').split('\n');
-  let title=(lines.find(x=>/^#\s+/.test(x))||'').replace(/^#\s+/,'').trim();
-  if(!title) title=file.replace(/^\d+-/,'').replace(/\.md$/,'');
-  const items=[]; let cur=null,field=null;
-  const push=()=>{if(cur){Object.keys(cur).forEach(k=>{if(typeof cur[k]==='string')cur[k]=cur[k].trim()});items.push(cur)}};
-  for(const line of lines){
-    const m=line.match(/^###\s+(\d+)\.\s+(.+)$/);
-    if(m){push();cur={n:m[1],title:m[2],cost:'',plain:'',benefit:'',grade:'',source:'',note:''};field=null;continue}
-    if(!cur) continue;
-    const f=line.match(/^[-*]\s*(成本|说人话|收益|证据等级|来源|备注)：\s*(.*)$/);
-    if(f){field={成本:'cost','说人话':'plain','收益':'benefit','证据等级':'grade','来源':'source','备注':'note'}[f[1]];cur[field]=f[2];continue}
-    if(field && line.trim() && !/^<!--/.test(line)) cur[field]+='\n'+line.trim();
-  }
-  push();
-  return {title,file,items};
+ const ch=(file.match(/^(\d+)-/)||[])[1]; if(!ch)return [];
+ const lines=text.replace(/\r/g,'').split('\n');const out=[];let cur=null,field=null;
+ const push=()=>{if(cur){for(const k of Object.keys(cur))if(typeof cur[k]==='string')cur[k]=cur[k].trim();out.push(cur)}};
+ for(const line of lines){
+  const m=line.match(/^###\s+(\d+)\.\s+(.+)$/);if(m){push();cur={key:String(ch).padStart(2,'0')+'-'+String(m[1]).padStart(2,'0'),title:m[2],cost:'',plain:'',benefit:'',grade:'',source:'',note:''};field=null;continue}
+  if(!cur)continue;const f=line.match(/^[-*]\s*(成本|说人话|收益|证据等级|来源|备注)：\s*(.*)$/);
+  if(f){field={成本:'cost','说人话':'plain','收益':'benefit','证据等级':'grade','来源':'source','备注':'note'}[f[1]];cur[field]=f[2];continue}
+  if(field && line.trim() && !line.startsWith('<!--'))cur[field]+=' '+line.trim();
+ }push();return out;
 }
 async function load(){
-  try{
-    const r=await fetch(API,{headers:{'Accept':'application/vnd.github+json'}});
-    if(!r.ok) throw new Error('目录读取失败 '+r.status);
-    const files=(await r.json()).filter(x=>x.type==='file'&&/^\d{2}-.*\.md$/.test(x.name)).sort((a,b)=>a.name.localeCompare(b.name,'zh-CN'));
-    status.textContent='正在加载 '+files.length+' 个章节……';
-    const data=await Promise.all(files.map(async f=>{
-      const rr=await fetch(f.download_url);
-      if(!rr.ok) throw new Error(f.name+' 读取失败');
-      return parse(await rr.text(),f.name);
-    }));
-    chapters=data.filter(x=>x.items.length);
-    status.textContent='已加载 '+chapters.length+' 个章节，共 '+chapters.reduce((n,c)=>n+c.items.length,0)+' 条建议。';
-    renderToc(); render();
-  }catch(e){
-    status.innerHTML='加载失败。可能是网络暂时无法访问 GitHub。你可以稍后重试，或打开原始在线版： <a href="https://eternity4719.github.io/HowToLiveBetter/" target="_blank" rel="noopener">高性价比人生指南</a><br><span class="small">'+esc(e.message)+'</span>';
-  }
-}
-function renderToc(){
-  toc.innerHTML=chapters.map((c,i)=>'<button type="button" data-i="'+i+'" class="'+(i===active?'active':'')+'">'+(i+1)+'. '+esc(c.title)+'</button>').join('');
-  toc.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{active=+b.dataset.i;query='';q.value='';renderToc();render();document.getElementById('chapter')?.scrollIntoView({behavior:'smooth',block:'start'})}));
-}
-function card(it){
-  return '<article class="card"><h3>'+esc(it.n)+'. '+esc(it.title)+'</h3>'+
-    (it.cost?'<div class="row"><span class="label">成本</span>'+fmt(it.cost)+'</div>':'')+
-    (it.plain?'<div class="row plain"><span class="label">说人话</span>'+fmt(it.plain)+'</div>':'')+
-    (it.benefit?'<div class="row benefit"><span class="label">收益</span>'+fmt(it.benefit)+'</div>':'')+
-    '<details><summary>查看证据、来源和备注</summary><div class="detail">'+
-    (it.grade?'<div class="row"><span class="label">证据等级</span>'+fmt(it.grade)+'</div>':'')+
-    (it.source?'<div class="row source"><span class="label">来源</span>'+fmt(it.source)+'</div>':'')+
-    (it.note?'<div class="row"><span class="label">备注</span>'+fmt(it.note)+'</div>':'')+
-    '</div></details></article>';
+ try{
+  const list=await fetch(API,{headers:{Accept:'application/vnd.github+json'}}).then(r=>{if(!r.ok)throw Error('目录加载失败');return r.json()});
+  const files=list.filter(x=>x.type==='file'&&/^\d+-.*\.md$/.test(x.name));
+  const texts=await Promise.all(files.map(async x=>[x.name,await fetch(x.download_url).then(r=>r.text())]));
+  for(const [name,text] of texts)for(const e of parse(text,name))book.set(e.key,e);
+  status.textContent='已按我们家的情况筛选；原资料更新后，本页内容也会随之读取最新正文。';render();
+ }catch(err){status.textContent='原资料加载失败，请稍后刷新。';console.error(err)}
 }
 function render(){
-  if(!chapters.length)return;
-  if(query){
-    const needle=query.toLowerCase();
-    const rows=[];
-    chapters.forEach((c,ci)=>c.items.forEach(it=>{const hay=[c.title,it.title,it.cost,it.plain,it.benefit,it.grade,it.note].join(' ').toLowerCase();if(hay.includes(needle))rows.push({c,ci,it})}));
-    content.innerHTML='<div id="chapter" class="chapterHead"><h2>搜索结果</h2><span class="small">'+rows.length+' 条</span></div>'+
-      (rows.length?rows.map(r=>'<div class="small">'+esc(r.c.title)+'</div>'+card(r.it)).join(''):'<div class="empty">没有找到相关内容</div>')+
-      '<a class="toplink" href="#tocSec">↑ 回目录</a>';
-    return;
-  }
-  const c=chapters[active];
-  content.innerHTML='<div id="chapter" class="chapterHead"><h2>'+(active+1)+'. '+esc(c.title)+'</h2><span class="small">'+c.items.length+' 条</span></div>'+
-    c.items.map(card).join('')+'<a class="toplink" href="#tocSec">↑ 回目录</a>';
+ const query=q.value.trim().toLowerCase();toc.innerHTML='';content.innerHTML='';let shown=0;
+ for(const g of cfg){
+  const items=g.items.map(([key,badge,family])=>{const e=book.get(key);return e?{...e,badge,family}:null}).filter(Boolean).filter(e=>{
+   const hay=(e.title+' '+e.badge+' '+e.family+' '+e.cost+' '+e.plain+' '+e.benefit).toLowerCase();
+   return(!query||hay.includes(query))&&(ev==='all'||e.grade===ev)
+  });
+  if(!items.length)continue;shown+=items.length;
+  const a=document.createElement('a');a.href='#'+g.id;a.innerHTML='<span class="icon">'+esc(g.icon)+'</span><span><b>'+esc(g.title)+'</b><br><small>'+items.length+' 条</small></span>';toc.appendChild(a);
+  const sec=document.createElement('section');sec.className='group';sec.id=g.id;sec.innerHTML='<div class="group-head"><h2>'+esc(g.title)+'</h2><p class="group-intro">'+esc(g.intro)+'</p></div>';
+  for(const e of items){
+   const d=document.createElement('article');d.className='entry';d.innerHTML='<div class="entry-main"><div class="meta"><span class="badge">'+esc(e.badge)+'</span><span class="source-no">原资料 '+esc(e.key)+'</span></div><div class="entry-title">'+esc(e.title)+'</div><div class="family-note"><strong>我们家：</strong>'+esc(e.family)+'</div><div class="field"><div class="label">成本</div><div>'+esc(e.cost)+'</div></div><div class="plain"><div class="label">说人话</div>'+esc(e.plain)+'</div><div class="field"><div class="label">收益</div><div>'+esc(e.benefit)+'</div></div></div><button class="detail-toggle" type="button">查看证据等级、来源和备注 ▾</button><div class="details"><div class="field"><div class="label">证据等级</div><div><span class="evidence '+esc(e.grade)+'">'+esc(e.grade)+'</span></div></div><div class="field"><div class="label">来源</div><div>'+fmt(e.source)+'</div></div><div class="field"><div class="label">备注</div><div>'+esc(e.note)+'</div></div></div>';
+   const b=d.querySelector('.detail-toggle');b.addEventListener('click',()=>{d.classList.toggle('open');b.textContent=d.classList.contains('open')?'收起证据、来源和备注 ▴':'查看证据等级、来源和备注 ▾'});sec.appendChild(d)
+  }content.appendChild(sec)
+ }no.style.display=shown?'none':'block'
 }
-let timer;
-q.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{query=q.value.trim();render()},180)});
-document.getElementById('fontBtn').addEventListener('click',e=>{document.body.classList.toggle('big');e.target.textContent=document.body.classList.contains('big')?'标准字':'大字'});
-load();
+q.addEventListener('input',render);document.getElementById('large').addEventListener('click',()=>document.body.classList.toggle('large'));document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');ev=b.dataset.ev;render()}));load();
 })();
 </script>
-</body>
-</html>
+</body></html>
