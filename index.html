@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#f7f4ed;--card:#fff;--text:#222;--muted:#6a625b;--line:#e5ddd1;--accent:#6b4f3a;--accent-bg:#efe7dc;--green:#2f6b4f;--amber:#8a5a14;--base:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:var(--base);line-height:1.68}body.large{--base:21px}a{color:#315f85;word-break:break-all}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:920px;margin:auto;padding:0 15px 80px}.hero{padding:26px 0 14px}.eyebrow{font-size:.82em;color:var(--muted)}h1{font-size:1.65em;line-height:1.25;margin:.25em 0 .45em}.lead{margin:0;color:#46413c}.privacy{margin:14px 0;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:.9em;color:#554d46}.priority{margin:16px 0;padding:14px 15px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.priority b{color:#765018}.priority ol{margin:8px 0 0;padding-left:1.3em}.toolbar{position:sticky;top:0;z-index:20;background:rgba(247,244,237,.96);backdrop-filter:blur(9px);padding:9px 0;border-bottom:1px solid var(--line)}.toolbar-row{display:grid;grid-template-columns:1fr auto;gap:8px}.search{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;min-height:46px}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:12px;padding:9px 13px;min-height:46px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.86em}.chip.active{background:var(--accent-bg);border-color:#ccb9a6}.status{margin:12px 0;padding:11px 13px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:.9em}.section-title{font-size:1.22em;margin:25px 0 10px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.toc a{text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px;display:flex;gap:9px;align-items:flex-start}.toc .icon{font-weight:800;color:var(--accent);min-width:1.8em}.group{scroll-margin-top:114px;margin-top:28px}.group-head{border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:10px}.group-head h2{font-size:1.35em;margin:0}.group-intro{margin:5px 0 0;color:var(--muted);font-size:.92em}.entry{background:#fff;border:1px solid var(--line);border-radius:16px;margin:11px 0;overflow:hidden}.entry-main{padding:14px}.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:7px}.badge{font-size:.78em;font-weight:750;padding:3px 8px;border-radius:999px;background:var(--accent-bg);color:var(--accent)}.source-no{font-size:.78em;color:var(--muted)}.entry-title{font-weight:780;font-size:1.06em;line-height:1.45}.family-note{margin:10px 0;background:#f6f0e8;border-radius:11px;padding:9px 11px}.family-note strong{color:var(--accent)}.field{display:grid;grid-template-columns:4.8em 1fr;gap:8px;margin:8px 0}.label{font-weight:700;color:#5b5148}.plain{background:#f8f5ef;border-radius:11px;padding:9px 11px;margin:9px 0}.benefit-toggle{border-top:1px solid var(--line)}.evidence-toggle{border-top:1px solid var(--line)}.detail-toggle{width:100%;border:0;border-top:1px solid var(--line);background:#faf8f4;padding:11px 14px;text-align:left;font-weight:700;color:#4b433c}.details{display:none;padding:10px 14px 14px;border-top:1px solid var(--line);background:#fdfcf9}.entry.open .details{display:block}.evidence{display:inline-flex;min-width:2.1em;justify-content:center;padding:1px 8px;border-radius:999px;font-weight:800;background:#e9f3ec;color:var(--green)}.evidence.B{background:#fff3dc;color:var(--amber)}.evidence.C{background:#eee;color:#555}.footer{margin-top:30px;color:var(--muted);font-size:.86em;border-top:1px solid var(--line);padding-top:14px}.no-results{display:none;text-align:center;color:var(--muted);padding:30px}.back{position:fixed;right:13px;bottom:16px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;text-decoration:none;color:var(--text)}
-.checkin-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 12px;padding:11px 13px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.checkin-summary b{color:#765018}.checkin-count{font-weight:800}.checkin-reset{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.82em}.daily-check{display:flex;gap:10px;align-items:flex-start}.daily-check input{margin-top:5px;transform:scale(1.25)}.daily-item.done{background:#eef7ee;border-color:#bfd6bf}.daily-item.done b{text-decoration:line-through;color:#50705a}.daily-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.daily-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.daily-item b{display:block;margin-bottom:3px}.person-mini{margin-top:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.person-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.person-box h3{margin:0 0 6px;font-size:1em}.person-box ul{margin:0;padding-left:1.2em}.person-box li{margin:3px 0}.daily-note{color:var(--muted);font-size:.9em;margin-top:8px}@media(max-width:600px){.daily-grid,.person-mini{grid-template-columns:1fr}}
+.fun-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.fun-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center}.fun-stat strong{display:block;font-size:1.25em;color:var(--accent)}.mood{font-size:1.35em}.person-check label{display:flex;gap:8px;align-items:flex-start}.person-check input{margin-top:5px;transform:scale(1.18)}.person-check.done{opacity:.72}.person-check.done span{text-decoration:line-through}.checkin-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 12px;padding:11px 13px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.checkin-summary b{color:#765018}.checkin-count{font-weight:800}.checkin-reset{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.82em}.daily-check{display:flex;gap:10px;align-items:flex-start}.daily-check input{margin-top:5px;transform:scale(1.25)}.daily-item.done{background:#eef7ee;border-color:#bfd6bf}.daily-item.done b{text-decoration:line-through;color:#50705a}.daily-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.daily-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.daily-item b{display:block;margin-bottom:3px}.person-mini{margin-top:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.person-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.person-box h3{margin:0 0 6px;font-size:1em}.person-box ul{margin:0;padding-left:1.2em}.person-box li{margin:3px 0}.daily-note{color:var(--muted);font-size:.9em;margin-top:8px}@media(max-width:600px){.daily-grid,.person-mini{grid-template-columns:1fr}.fun-stats{grid-template-columns:1fr 1fr 1fr}}
 @media(max-width:600px){.toc{grid-template-columns:1fr}.field{grid-template-columns:1fr;gap:1px}.toolbar-row{grid-template-columns:1fr auto}}
 </style>
 </head>
@@ -29,7 +29,12 @@
 </section>
 <section class="daily-section">
 <h2 class="section-title">我们家每天照着做</h2>
-<div class="checkin-summary"><div><b>今日打卡</b><div><span class="checkin-count" id="checkinCount">0/8</span> 完成</div></div><button class="checkin-reset" id="resetCheckin" type="button">清空今天</button></div>
+<div class="checkin-summary"><div><b>今日打卡 <span class="mood" id="moodIcon">🌱</span></b><div><span class="checkin-count" id="checkinCount">0/8</span> 完成</div></div><button class="checkin-reset" id="resetCheckin" type="button">清空今天</button></div>
+<div class="fun-stats">
+  <div class="fun-stat"><span>连续全勤</span><strong id="streakCount">0天</strong></div>
+  <div class="fun-stat"><span>本周完成率</span><strong id="weekRate">0%</strong></div>
+  <div class="fun-stat"><span>今天状态</span><strong id="todayLabel">刚开始</strong></div>
+</div>
 <div class="daily-grid" id="dailyGrid">
 <div class="daily-item" data-task="nosugar"><label class="daily-check"><input type="checkbox"><span><b>不喝含糖饮料</b>白水或无糖茶优先。</span></label></div>
 <div class="daily-item" data-task="nocaffeine"><label class="daily-check"><input type="checkbox"><span><b>下午2点后不喝咖啡因</b>咖啡、浓茶、能量饮料都算。</span></label></div>
@@ -43,10 +48,29 @@
 <div class="daily-note">这部分只放“成本低、每天能执行、长期回报高”的习惯。</div>
 
 <div class="person-mini">
-<div class="person-box"><h3>爸爸</h3><ul><li>量血压并记录</li><li>按时吃降压药</li><li>按医生要求复查尿酸和肾功能</li><li>结石期重点保证饮水、控制盐</li></ul></div>
-<div class="person-box"><h3>妈妈</h3><ul><li>幽门螺杆菌疗程按时吃药</li><li>记录暴汗、睡眠、心慌等更年期症状</li><li>把乳腺、宫颈、结直肠筛查排上</li><li>不要从别人那里拿东西回来</li></ul></div>
-<div class="person-box"><h3>文文</h3><ul><li>牙齿治疗按计划继续</li><li>每天补一点运动量</li><li>控制下午咖啡因，优先把睡眠拉回来</li><li>Mooty资金不动家庭安全垫</li></ul></div>
-<div class="person-box"><h3>晨晨</h3><ul><li>保持规律作息</li><li>近视定期复查</li><li>求职期间注意账号安全和诈骗</li></ul></div>
+<div class="person-box" data-person="dad"><h3>爸爸</h3><ul>
+<li class="person-check" data-task="bp"><label><input type="checkbox"><span>量血压并记录</span></label></li>
+<li class="person-check" data-task="med"><label><input type="checkbox"><span>按时吃降压药</span></label></li>
+<li class="person-check" data-task="water"><label><input type="checkbox"><span>结石期重点保证饮水、控制盐</span></label></li>
+<li class="person-check" data-task="food"><label><input type="checkbox"><span>今天没有暴饮暴食</span></label></li>
+</ul></div>
+<div class="person-box" data-person="mom"><h3>妈妈</h3><ul>
+<li class="person-check" data-task="hp"><label><input type="checkbox"><span>幽门螺杆菌疗程按时吃药</span></label></li>
+<li class="person-check" data-task="symptom"><label><input type="checkbox"><span>记录暴汗、睡眠、心慌等更年期症状</span></label></li>
+<li class="person-check" data-task="screen"><label><input type="checkbox"><span>筛查事项按计划推进</span></label></li>
+<li class="person-check" data-task="nostuff"><label><input type="checkbox"><span>今天没有从别人那里拿东西回来</span></label></li>
+</ul></div>
+<div class="person-box" data-person="wenwen"><h3>文文</h3><ul>
+<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>牙齿治疗按计划继续</span></label></li>
+<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天补了一点运动量</span></label></li>
+<li class="person-check" data-task="coffee"><label><input type="checkbox"><span>下午2点后没喝咖啡因</span></label></li>
+<li class="person-check" data-task="money"><label><input type="checkbox"><span>Mooty资金没动家庭安全垫</span></label></li>
+</ul></div>
+<div class="person-box" data-person="chenchen"><h3>晨晨</h3><ul>
+<li class="person-check" data-task="sleep"><label><input type="checkbox"><span>保持规律作息</span></label></li>
+<li class="person-check" data-task="eyes"><label><input type="checkbox"><span>注意用眼与近视复查</span></label></li>
+<li class="person-check" data-task="job"><label><input type="checkbox"><span>求职期间注意账号安全和诈骗</span></label></li>
+</ul></div>
 </div>
 </section>
 <div class="toolbar">
@@ -161,9 +185,27 @@ function render(){
   }content.appendChild(sec)
  }no.style.display=shown?'none':'block'
 }
-const today=new Date().toISOString().slice(0,10),storageKey='family_checkin_'+today;
+const pad=n=>String(n).padStart(2,'0');
+const dateKey=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const today=dateKey(new Date()),storageKey='family_checkin_'+today;
 const boxes=[...document.querySelectorAll('#dailyGrid .daily-item')];
 let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')}catch(e){}
+function saveHistory(done,total){
+  const key='family_checkin_history';
+  let h={};try{h=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+  h[today]={done,total};
+  localStorage.setItem(key,JSON.stringify(h));
+}
+function calcStats(){
+  let h={};try{h=JSON.parse(localStorage.getItem('family_checkin_history')||'{}')}catch(e){}
+  let streak=0;let d=new Date();
+  while(true){const k=dateKey(d);const x=h[k];if(x&&x.total>0&&x.done===x.total){streak++;d.setDate(d.getDate()-1)}else break}
+  const sc=document.getElementById('streakCount');if(sc)sc.textContent=streak+'天';
+  const now=new Date(),dow=(now.getDay()+6)%7,monday=new Date(now);monday.setDate(now.getDate()-dow);
+  let done=0,total=0;
+  for(let i=0;i<=dow;i++){const dd=new Date(monday);dd.setDate(monday.getDate()+i);const x=h[dateKey(dd)];if(x){done+=x.done;total+=x.total}else{total+=boxes.length}}
+  const wr=document.getElementById('weekRate');if(wr)wr.textContent=total?Math.round(done/total*100)+'%':'0%';
+}
 function updateCheckin(){
  let done=0;
  boxes.forEach(item=>{
@@ -173,18 +215,28 @@ function updateCheckin(){
    if(cb.checked)done++;
  });
  const c=document.getElementById('checkinCount');if(c)c.textContent=done+'/'+boxes.length;
+ const icon=document.getElementById('moodIcon'),label=document.getElementById('todayLabel');
+ if(done===boxes.length){if(icon)icon.textContent='🎉';if(label)label.textContent='全勤'}
+ else if(done>=6){if(icon)icon.textContent='🌳';if(label)label.textContent='很不错'}
+ else if(done>=3){if(icon)icon.textContent='🌿';if(label)label.textContent='进行中'}
+ else{if(icon)icon.textContent='🌱';if(label)label.textContent='刚开始'}
+ saveHistory(done,boxes.length);calcStats();
 }
 boxes.forEach(item=>{
  const cb=item.querySelector('input[type="checkbox"]');
- cb.addEventListener('change',()=>{
-   saved[item.dataset.task]=cb.checked;
-   localStorage.setItem(storageKey,JSON.stringify(saved));
-   updateCheckin();
- });
+ cb.addEventListener('change',()=>{saved[item.dataset.task]=cb.checked;localStorage.setItem(storageKey,JSON.stringify(saved));updateCheckin();});
 });
 const reset=document.getElementById('resetCheckin');
 if(reset)reset.addEventListener('click',()=>{saved={};localStorage.removeItem(storageKey);updateCheckin();});
 updateCheckin();
+
+const personItems=[...document.querySelectorAll('.person-box .person-check')];
+for(const li of personItems){
+  const box=li.closest('.person-box'),person=box.dataset.person,task=li.dataset.task,cb=li.querySelector('input');
+  const key='person_checkin_'+today+'_'+person+'_'+task;
+  cb.checked=localStorage.getItem(key)==='1';li.classList.toggle('done',cb.checked);
+  cb.addEventListener('change',()=>{localStorage.setItem(key,cb.checked?'1':'0');li.classList.toggle('done',cb.checked);});
+}
 q.addEventListener('input',render);document.getElementById('large').addEventListener('click',()=>document.body.classList.toggle('large'));document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');ev=b.dataset.ev;render()}));load();
 })();
 </script>
