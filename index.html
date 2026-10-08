@@ -8,7 +8,7 @@
 <style>
 :root{--bg:#f7f4ed;--card:#fff;--text:#222;--muted:#6a625b;--line:#e5ddd1;--accent:#6b4f3a;--accent-bg:#efe7dc;--green:#2f6b4f;--amber:#8a5a14;--base:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;font-size:var(--base);line-height:1.68}body.large{--base:21px}a{color:#315f85;word-break:break-all}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:920px;margin:auto;padding:0 15px 80px}.hero{padding:26px 0 14px}.eyebrow{font-size:.82em;color:var(--muted)}h1{font-size:1.65em;line-height:1.25;margin:.25em 0 .45em}.lead{margin:0;color:#46413c}.privacy{margin:14px 0;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:14px;font-size:.9em;color:#554d46}.priority{margin:16px 0;padding:14px 15px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.priority b{color:#765018}.priority ol{margin:8px 0 0;padding-left:1.3em}.toolbar{position:sticky;top:0;z-index:20;background:rgba(247,244,237,.96);backdrop-filter:blur(9px);padding:9px 0;border-bottom:1px solid var(--line)}.toolbar-row{display:grid;grid-template-columns:1fr auto;gap:8px}.search{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:11px 13px;min-height:46px}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:12px;padding:9px 13px;min-height:46px}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.86em}.chip.active{background:var(--accent-bg);border-color:#ccb9a6}.status{margin:12px 0;padding:11px 13px;border-radius:12px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:.9em}.section-title{font-size:1.22em;margin:25px 0 10px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.toc a{text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px;display:flex;gap:9px;align-items:flex-start}.toc .icon{font-weight:800;color:var(--accent);min-width:1.8em}.group{scroll-margin-top:114px;margin-top:28px}.group-head{border-bottom:2px solid var(--line);padding-bottom:8px;margin-bottom:10px}.group-head h2{font-size:1.35em;margin:0}.group-intro{margin:5px 0 0;color:var(--muted);font-size:.92em}.entry{background:#fff;border:1px solid var(--line);border-radius:16px;margin:11px 0;overflow:hidden}.entry-main{padding:14px}.meta{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-bottom:7px}.badge{font-size:.78em;font-weight:750;padding:3px 8px;border-radius:999px;background:var(--accent-bg);color:var(--accent)}.source-no{font-size:.78em;color:var(--muted)}.entry-title{font-weight:780;font-size:1.06em;line-height:1.45}.family-note{margin:10px 0;background:#f6f0e8;border-radius:11px;padding:9px 11px}.family-note strong{color:var(--accent)}.field{display:grid;grid-template-columns:4.8em 1fr;gap:8px;margin:8px 0}.label{font-weight:700;color:#5b5148}.plain{background:#f8f5ef;border-radius:11px;padding:9px 11px;margin:9px 0}.benefit-toggle{border-top:1px solid var(--line)}.evidence-toggle{border-top:1px solid var(--line)}.detail-toggle{width:100%;border:0;border-top:1px solid var(--line);background:#faf8f4;padding:11px 14px;text-align:left;font-weight:700;color:#4b433c}.details{display:none;padding:10px 14px 14px;border-top:1px solid var(--line);background:#fdfcf9}.entry.open .details{display:block}.evidence{display:inline-flex;min-width:2.1em;justify-content:center;padding:1px 8px;border-radius:999px;font-weight:800;background:#e9f3ec;color:var(--green)}.evidence.B{background:#fff3dc;color:var(--amber)}.evidence.C{background:#eee;color:#555}.footer{margin-top:30px;color:var(--muted);font-size:.86em;border-top:1px solid var(--line);padding-top:14px}.no-results{display:none;text-align:center;color:var(--muted);padding:30px}.back{position:fixed;right:13px;bottom:16px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;text-decoration:none;color:var(--text)}
-.daily-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.daily-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.daily-item b{display:block;margin-bottom:3px}.person-mini{margin-top:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.person-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.person-box h3{margin:0 0 6px;font-size:1em}.person-box ul{margin:0;padding-left:1.2em}.person-box li{margin:3px 0}.daily-note{color:var(--muted);font-size:.9em;margin-top:8px}@media(max-width:600px){.daily-grid,.person-mini{grid-template-columns:1fr}}
+.checkin-summary{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:10px 0 12px;padding:11px 13px;background:#fff7e8;border:1px solid #ead5aa;border-radius:14px}.checkin-summary b{color:#765018}.checkin-count{font-weight:800}.checkin-reset{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 10px;font-size:.82em}.daily-check{display:flex;gap:10px;align-items:flex-start}.daily-check input{margin-top:5px;transform:scale(1.25)}.daily-item.done{background:#eef7ee;border-color:#bfd6bf}.daily-item.done b{text-decoration:line-through;color:#50705a}.daily-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:10px}.daily-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.daily-item b{display:block;margin-bottom:3px}.person-mini{margin-top:12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.person-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.person-box h3{margin:0 0 6px;font-size:1em}.person-box ul{margin:0;padding-left:1.2em}.person-box li{margin:3px 0}.daily-note{color:var(--muted);font-size:.9em;margin-top:8px}@media(max-width:600px){.daily-grid,.person-mini{grid-template-columns:1fr}}
 @media(max-width:600px){.toc{grid-template-columns:1fr}.field{grid-template-columns:1fr;gap:1px}.toolbar-row{grid-template-columns:1fr auto}}
 </style>
 </head>
@@ -29,15 +29,16 @@
 </section>
 <section class="daily-section">
 <h2 class="section-title">我们家每天照着做</h2>
-<div class="daily-grid">
-<div class="daily-item"><b>☐ 不喝含糖饮料</b><span>白水或无糖茶优先。</span></div>
-<div class="daily-item"><b>☐ 下午2点后不喝咖啡因</b><span>咖啡、浓茶、能量饮料都算。</span></div>
-<div class="daily-item"><b>☐ 家里用低钠盐</b><span>有肾功能异常或正在吃保钾类药物的人，先问医生。</span></div>
-<div class="daily-item"><b>☐ 今天有蔬菜水果</b><span>尽量让每餐都能看到蔬菜。</span></div>
-<div class="daily-item"><b>☐ 今天有走路或运动</b><span>能走就走，逐步把活动量做上去。</span></div>
-<div class="daily-item"><b>☐ 按时吃药</b><span>尤其是降压药和医生明确要求长期服用的药。</span></div>
-<div class="daily-item"><b>☐ 刷牙＋清牙缝</b><span>每天至少一次牙线或牙缝刷。</span></div>
-<div class="daily-item"><b>☐ 尽量固定时间睡觉</b><span>目标约7小时睡眠，熬夜后尽快补。</span></div>
+<div class="checkin-summary"><div><b>今日打卡</b><div><span class="checkin-count" id="checkinCount">0/8</span> 完成</div></div><button class="checkin-reset" id="resetCheckin" type="button">清空今天</button></div>
+<div class="daily-grid" id="dailyGrid">
+<div class="daily-item" data-task="nosugar"><label class="daily-check"><input type="checkbox"><span><b>不喝含糖饮料</b>白水或无糖茶优先。</span></label></div>
+<div class="daily-item" data-task="nocaffeine"><label class="daily-check"><input type="checkbox"><span><b>下午2点后不喝咖啡因</b>咖啡、浓茶、能量饮料都算。</span></label></div>
+<div class="daily-item" data-task="lowsalt"><label class="daily-check"><input type="checkbox"><span><b>家里用低钠盐</b>有肾功能异常或正在吃保钾类药物的人，先问医生。</span></label></div>
+<div class="daily-item" data-task="veg"><label class="daily-check"><input type="checkbox"><span><b>今天有蔬菜水果</b>尽量让每餐都能看到蔬菜。</span></label></div>
+<div class="daily-item" data-task="move"><label class="daily-check"><input type="checkbox"><span><b>今天有走路或运动</b>能走就走，逐步把活动量做上去。</span></label></div>
+<div class="daily-item" data-task="meds"><label class="daily-check"><input type="checkbox"><span><b>按时吃药</b>尤其是降压药和医生明确要求长期服用的药。</span></label></div>
+<div class="daily-item" data-task="teeth"><label class="daily-check"><input type="checkbox"><span><b>刷牙＋清牙缝</b>每天至少一次牙线或牙缝刷。</span></label></div>
+<div class="daily-item" data-task="sleep"><label class="daily-check"><input type="checkbox"><span><b>尽量固定时间睡觉</b>目标约7小时睡眠，熬夜后尽快补。</span></label></div>
 </div>
 <div class="daily-note">这部分只放“成本低、每天能执行、长期回报高”的习惯。</div>
 
@@ -160,6 +161,30 @@ function render(){
   }content.appendChild(sec)
  }no.style.display=shown?'none':'block'
 }
+const today=new Date().toISOString().slice(0,10),storageKey='family_checkin_'+today;
+const boxes=[...document.querySelectorAll('#dailyGrid .daily-item')];
+let saved={};try{saved=JSON.parse(localStorage.getItem(storageKey)||'{}')}catch(e){}
+function updateCheckin(){
+ let done=0;
+ boxes.forEach(item=>{
+   const cb=item.querySelector('input[type="checkbox"]');
+   cb.checked=!!saved[item.dataset.task];
+   item.classList.toggle('done',cb.checked);
+   if(cb.checked)done++;
+ });
+ const c=document.getElementById('checkinCount');if(c)c.textContent=done+'/'+boxes.length;
+}
+boxes.forEach(item=>{
+ const cb=item.querySelector('input[type="checkbox"]');
+ cb.addEventListener('change',()=>{
+   saved[item.dataset.task]=cb.checked;
+   localStorage.setItem(storageKey,JSON.stringify(saved));
+   updateCheckin();
+ });
+});
+const reset=document.getElementById('resetCheckin');
+if(reset)reset.addEventListener('click',()=>{saved={};localStorage.removeItem(storageKey);updateCheckin();});
+updateCheckin();
 q.addEventListener('input',render);document.getElementById('large').addEventListener('click',()=>document.body.classList.toggle('large'));document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');ev=b.dataset.ev;render()}));load();
 })();
 </script>
