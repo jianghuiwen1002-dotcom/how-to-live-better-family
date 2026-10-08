@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f3ea">
+<title>高性价比人生指南｜家庭手机版</title>
+<style>
+:root{--bg:#f7f3ea;--card:#fffdf8;--ink:#25231f;--muted:#716c62;--line:#ddd6c8;--accent:#6b5b45;--accent2:#efe7d9;--ok:#426b4b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:18px}
+body.big{font-size:21px}.wrap{max-width:860px;margin:auto;padding:18px 14px 60px}.hero{padding:18px 4px 10px}.hero h1{font-size:1.65em;line-height:1.25;margin:0 0 8px}.hero p{margin:6px 0;color:var(--muted)}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(247,243,234,.96);backdrop-filter:blur(8px);padding:10px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:8px}
+.search{width:100%;font:inherit;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#fff}.btn{font:inherit;border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 13px;cursor:pointer;color:var(--ink)}
+.status{margin:14px 0;padding:13px 14px;border-radius:12px;background:var(--accent2);color:var(--muted)}
+h2{font-size:1.3em;margin:28px 0 12px}.toc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.toc button{text-align:left;font:inherit;line-height:1.35;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card);cursor:pointer;color:var(--ink)}.toc button.active{border-color:var(--accent);background:var(--accent2)}
+.chapterHead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:28px}.chapterHead h2{margin:0}.small{font-size:.85em;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:12px 0}.card h3{font-size:1.12em;line-height:1.45;margin:0 0 12px}.row{margin:9px 0}.label{display:inline-block;min-width:4.8em;font-weight:700;color:var(--accent)}.plain{font-size:1.04em}.benefit{padding:10px 12px;background:#f3f7f1;border-left:4px solid var(--ok);border-radius:8px}
+details{margin-top:12px;border-top:1px dashed var(--line);padding-top:10px}summary{cursor:pointer;font-weight:700;color:var(--accent);min-height:44px;display:flex;align-items:center}.detail{font-size:.92em;color:#4e4a43}.detail .row{margin:10px 0}.source a{word-break:break-all}
+.toplink{display:inline-block;margin-top:8px;color:var(--accent)}.empty{padding:26px;text-align:center;color:var(--muted)}
+.footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:.85em;color:var(--muted)}
+@media(max-width:560px){.wrap{padding:12px 10px 48px}.toc{grid-template-columns:1fr}.toolbar{grid-template-columns:1fr auto}.card{padding:14px;border-radius:14px}.hero h1{font-size:1.48em}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <h1>高性价比人生指南｜家庭手机版</h1>
+    <p>先看目录，再看“成本、说人话、收益”。需要核对时，再展开证据、来源和备注。</p>
+    <p class="small">内容来自公开项目 HowToLiveBetter。网页每次打开会读取该项目最新中文正文。</p>
+  </section>
+  <div class="toolbar">
+    <input id="q" class="search" type="search" placeholder="搜索：血压、牙齿、老人、睡眠……" aria-label="搜索">
+    <button id="fontBtn" class="btn" type="button">大字</button>
+  </div>
+  <div id="status" class="status">正在加载内容，请稍候……</div>
+  <section id="tocSec">
+    <h2>目录</h2>
+    <div id="toc" class="toc"></div>
+  </section>
+  <section id="content"></section>
+  <div class="footer">
+    本页仅用于家庭查阅与信息整理，不替代医生、律师或其他专业人士的个别判断。原项目内容会更新；具体政策、价格和医疗建议请以所在地最新官方信息为准。
+  </div>
+</div>
+<script>
+(()=>{
+const API='https://api.github.com/repos/eternity4719/HowToLiveBetter/contents/book';
+const q=document.getElementById('q'),toc=document.getElementById('toc'),content=document.getElementById('content'),status=document.getElementById('status');
+let chapters=[], active=0, query='';
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const fmt=s=>{
+  let x=esc(s||'').replace(/\n/g,'<br>');
+  x=x.replace(/(https?:\/\/[^\s<)）]+[^\s<.,;:!?，。；：！？)）])/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+  return x;
+};
+function parse(text,file){
+  const lines=text.replace(/\r/g,'').split('\n');
+  let title=(lines.find(x=>/^#\s+/.test(x))||'').replace(/^#\s+/,'').trim();
+  if(!title) title=file.replace(/^\d+-/,'').replace(/\.md$/,'');
+  const items=[]; let cur=null,field=null;
+  const push=()=>{if(cur){Object.keys(cur).forEach(k=>{if(typeof cur[k]==='string')cur[k]=cur[k].trim()});items.push(cur)}};
+  for(const line of lines){
+    const m=line.match(/^###\s+(\d+)\.\s+(.+)$/);
+    if(m){push();cur={n:m[1],title:m[2],cost:'',plain:'',benefit:'',grade:'',source:'',note:''};field=null;continue}
+    if(!cur) continue;
+    const f=line.match(/^[-*]\s*(成本|说人话|收益|证据等级|来源|备注)：\s*(.*)$/);
+    if(f){field={成本:'cost','说人话':'plain','收益':'benefit','证据等级':'grade','来源':'source','备注':'note'}[f[1]];cur[field]=f[2];continue}
+    if(field && line.trim() && !/^<!--/.test(line)) cur[field]+='\n'+line.trim();
+  }
+  push();
+  return {title,file,items};
+}
+async function load(){
+  try{
+    const r=await fetch(API,{headers:{'Accept':'application/vnd.github+json'}});
+    if(!r.ok) throw new Error('目录读取失败 '+r.status);
+    const files=(await r.json()).filter(x=>x.type==='file'&&/^\d{2}-.*\.md$/.test(x.name)).sort((a,b)=>a.name.localeCompare(b.name,'zh-CN'));
+    status.textContent='正在加载 '+files.length+' 个章节……';
+    const data=await Promise.all(files.map(async f=>{
+      const rr=await fetch(f.download_url);
+      if(!rr.ok) throw new Error(f.name+' 读取失败');
+      return parse(await rr.text(),f.name);
+    }));
+    chapters=data.filter(x=>x.items.length);
+    status.textContent='已加载 '+chapters.length+' 个章节，共 '+chapters.reduce((n,c)=>n+c.items.length,0)+' 条建议。';
+    renderToc(); render();
+  }catch(e){
+    status.innerHTML='加载失败。可能是网络暂时无法访问 GitHub。你可以稍后重试，或打开原始在线版： <a href="https://eternity4719.github.io/HowToLiveBetter/" target="_blank" rel="noopener">高性价比人生指南</a><br><span class="small">'+esc(e.message)+'</span>';
+  }
+}
+function renderToc(){
+  toc.innerHTML=chapters.map((c,i)=>'<button type="button" data-i="'+i+'" class="'+(i===active?'active':'')+'">'+(i+1)+'. '+esc(c.title)+'</button>').join('');
+  toc.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{active=+b.dataset.i;query='';q.value='';renderToc();render();document.getElementById('chapter')?.scrollIntoView({behavior:'smooth',block:'start'})}));
+}
+function card(it){
+  return '<article class="card"><h3>'+esc(it.n)+'. '+esc(it.title)+'</h3>'+
+    (it.cost?'<div class="row"><span class="label">成本</span>'+fmt(it.cost)+'</div>':'')+
+    (it.plain?'<div class="row plain"><span class="label">说人话</span>'+fmt(it.plain)+'</div>':'')+
+    (it.benefit?'<div class="row benefit"><span class="label">收益</span>'+fmt(it.benefit)+'</div>':'')+
+    '<details><summary>查看证据、来源和备注</summary><div class="detail">'+
+    (it.grade?'<div class="row"><span class="label">证据等级</span>'+fmt(it.grade)+'</div>':'')+
+    (it.source?'<div class="row source"><span class="label">来源</span>'+fmt(it.source)+'</div>':'')+
+    (it.note?'<div class="row"><span class="label">备注</span>'+fmt(it.note)+'</div>':'')+
+    '</div></details></article>';
+}
+function render(){
+  if(!chapters.length)return;
+  if(query){
+    const needle=query.toLowerCase();
+    const rows=[];
+    chapters.forEach((c,ci)=>c.items.forEach(it=>{const hay=[c.title,it.title,it.cost,it.plain,it.benefit,it.grade,it.note].join(' ').toLowerCase();if(hay.includes(needle))rows.push({c,ci,it})}));
+    content.innerHTML='<div id="chapter" class="chapterHead"><h2>搜索结果</h2><span class="small">'+rows.length+' 条</span></div>'+
+      (rows.length?rows.map(r=>'<div class="small">'+esc(r.c.title)+'</div>'+card(r.it)).join(''):'<div class="empty">没有找到相关内容</div>')+
+      '<a class="toplink" href="#tocSec">↑ 回目录</a>';
+    return;
+  }
+  const c=chapters[active];
+  content.innerHTML='<div id="chapter" class="chapterHead"><h2>'+(active+1)+'. '+esc(c.title)+'</h2><span class="small">'+c.items.length+' 条</span></div>'+
+    c.items.map(card).join('')+'<a class="toplink" href="#tocSec">↑ 回目录</a>';
+}
+let timer;
+q.addEventListener('input',()=>{clearTimeout(timer);timer=setTimeout(()=>{query=q.value.trim();render()},180)});
+document.getElementById('fontBtn').addEventListener('click',e=>{document.body.classList.toggle('big');e.target.textContent=document.body.classList.contains('big')?'标准字':'大字'});
+load();
+})();
+</script>
+</body>
+</html>
