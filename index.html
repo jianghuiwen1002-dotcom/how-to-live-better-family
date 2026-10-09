@@ -74,48 +74,41 @@
 </section>
 <section class="daily-section">
 <details class="top-panel">
-<summary>✅ 每日打卡</summary>
-<div class="panel-body">
-<h2 class="section-title">我们家每天照着做</h2>
-<div class="checkin-summary"><div><b>今日打卡 <span class="mood" id="moodIcon">🌱</span></b><div><span class="checkin-count" id="checkinCount">0/7</span> 完成</div><div class="progress-track"><div class="progress-fill" id="todayProgress"></div></div></div><button class="checkin-reset" id="resetCheckin" type="button">清空今天</button></div>
-<div class="celebrate" id="celebrate">🎉 今天全勤啦，给自己一个小红花 🌸</div>
-<div class="fun-stats">
-  <div class="fun-stat"><span>连续全勤</span><strong id="streakCount">0天</strong></div>
-  <div class="fun-stat"><span>本周完成率</span><strong id="weekRate">0%</strong></div>
-  <div class="fun-stat"><span>今天状态</span><strong id="todayLabel">刚开始</strong></div>
-</div>
-<div class="daily-grid" id="dailyGrid">
-<div class="daily-item" data-task="nosugar"><label class="daily-check"><input type="checkbox"><span><b>不喝含糖饮料</b>白水或无糖茶优先。</span></label></div>
-
-<div class="daily-item" data-task="lowsalt"><label class="daily-check"><input type="checkbox"><span><b>家里用低钠盐</b>有肾功能异常或正在吃保钾类药物的人，先问医生。</span></label></div>
-<div class="daily-item" data-task="veg"><label class="daily-check"><input type="checkbox"><span><b>今天有蔬菜水果</b>尽量让每餐都能看到蔬菜。</span></label></div>
-<div class="daily-item" data-task="move"><label class="daily-check"><input type="checkbox"><span><b>今天有走路或运动</b>能走就走，逐步把活动量做上去。</span></label></div>
-<div class="daily-item" data-task="meds"><label class="daily-check"><input type="checkbox"><span><b>按时吃药</b>尤其是降压药和医生明确要求长期服用的药。</span></label></div>
-<div class="daily-item" data-task="teeth"><label class="daily-check"><input type="checkbox"><span><b>刷牙＋清牙缝</b>每天至少一次牙线或牙缝刷。</span></label></div>
-<div class="daily-item" data-task="sleep"><label class="daily-check"><input type="checkbox"><span><b>按各自时间睡觉</b>爸爸、妈妈、晨晨尽量23:00前睡；文文尽量24:00前睡。</span></label></div>
-</div>
-<div class="daily-note">这部分只放“成本低、每天能执行、长期回报高”的习惯。</div>
-</div></details>
-<details class="top-panel">
-<summary>👨‍👩‍👧‍👧 每个人</summary>
+<summary>👨‍👩‍👧‍👧 每个人｜每日打卡</summary>
 <div class="panel-body">
 <div class="person-mini">
-<details class="nested-panel"><summary>爸爸</summary><div class="person-box" data-person="dad"><ul>
+
+<details class="nested-panel"><summary>爸爸｜每日打卡</summary>
+<div class="person-box" data-person="dad">
+<h3>今天照着做</h3>
+<ul>
+<li class="person-check" data-task="nosugar"><label><input type="checkbox"><span>不喝含糖饮料</span></label></li>
+<li class="person-check" data-task="veg"><label><input type="checkbox"><span>今天有蔬菜水果</span></label></li>
+<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天有走路或运动</span></label></li>
+<li class="person-check" data-task="med"><label><input type="checkbox"><span>按时吃降压药和医生要求的药</span></label></li>
+<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>刷牙＋清牙缝</span></label></li>
 <li class="person-check" data-task="bp"><label><input type="checkbox"><span>量血压并记录</span></label></li>
-<li class="person-check" data-task="med"><label><input type="checkbox"><span>按时吃降压药</span></label></li>
-<li class="person-check" data-task="water"><label><input type="checkbox"><span>结石期重点保证饮水、控制盐</span></label></li>
+<li class="person-check" data-task="water"><label><input type="checkbox"><span>喝够水、饮食少盐</span></label></li>
 <li class="person-check" data-task="food"><label><input type="checkbox"><span>今天没有暴饮暴食</span></label></li>
-<li class="person-check" data-task="dad-sleep"><label><input type="checkbox"><span>23:00前睡觉</span></label></li>
-</ul></div></details>
-<details class="nested-panel"><summary>妈妈</summary><div class="person-box" data-person="mom"><ul>
-<li class="person-check" data-task="hp"><label><input type="checkbox"><span>幽门螺杆菌疗程按时吃药</span></label></li>
-<li class="person-check" data-task="symptom"><label><input type="checkbox"><span>记录暴汗、睡眠、心慌等更年期症状和可能诱因</span></label></li>
-<li class="person-check" data-task="screen"><label><input type="checkbox"><span>筛查事项按计划推进</span></label></li>
-<li class="person-check" data-task="cool"><label><input type="checkbox"><span>潮热明显时少喝咖啡/浓茶，卧室保持凉爽</span></label></li>
-<li class="person-check" data-task="mom-sleep"><label><input type="checkbox"><span>23:00前睡觉</span></label></li>
-
-
+<li class="person-check" data-task="sleep"><label><input type="checkbox"><span>23:00前睡觉</span></label></li>
 </ul>
+</div></details>
+
+<details class="nested-panel"><summary>妈妈｜每日打卡</summary>
+<div class="person-box" data-person="mom">
+<h3>今天照着做</h3>
+<ul>
+<li class="person-check" data-task="nosugar"><label><input type="checkbox"><span>不喝含糖饮料</span></label></li>
+<li class="person-check" data-task="veg"><label><input type="checkbox"><span>今天有蔬菜水果</span></label></li>
+<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天有走路或运动</span></label></li>
+<li class="person-check" data-task="hp"><label><input type="checkbox"><span>幽门螺杆菌疗程按时吃药</span></label></li>
+<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>刷牙＋清牙缝</span></label></li>
+<li class="person-check" data-task="symptom"><label><input type="checkbox"><span>留意潮热、暴汗、睡眠等变化</span></label></li>
+<li class="person-check" data-task="cool"><label><input type="checkbox"><span>潮热明显时少咖啡/浓茶，卧室保持凉爽</span></label></li>
+<li class="person-check" data-task="sleep"><label><input type="checkbox"><span>23:00前睡觉</span></label></li>
+</ul>
+<h3>近期事项</h3>
+<ul><li>乳腺、宫颈、结直肠筛查按计划推进</li></ul>
 <div class="menopause-box">
 <h3>更年期注意事项</h3>
 <ul>
@@ -126,20 +119,43 @@
 <li><b>激素治疗：</b>如果暴汗/潮热明显影响生活，可以和医生讨论HRT；不要自己买激素或自行加量。</li>
 </ul>
 </div>
-<ul></ul></div></details>
-<details class="nested-panel"><summary>文文</summary><div class="person-box" data-person="wenwen"><ul>
-<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>牙齿治疗按计划继续</span></label></li>
-<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天补了一点运动量</span></label></li>
-<li class="person-check" data-task="coffee"><label><input type="checkbox"><span>下午2点后没喝咖啡因</span></label></li>
-<li class="person-check" data-task="wenwen-sleep"><label><input type="checkbox"><span>24:00前睡觉</span></label></li>
-<li class="person-check" data-task="buy-equol"><label><input type="checkbox"><span>给妈妈补买 DHC 大豆异黄酮エクオール</span></label></li>
+</div></details>
 
-</ul></div></details>
-<details class="nested-panel"><summary>晨晨</summary><div class="person-box" data-person="chenchen"><ul>
+<details class="nested-panel"><summary>文文｜每日打卡</summary>
+<div class="person-box" data-person="wenwen">
+<h3>今天照着做</h3>
+<ul>
+<li class="person-check" data-task="nosugar"><label><input type="checkbox"><span>不喝含糖饮料</span></label></li>
+<li class="person-check" data-task="veg"><label><input type="checkbox"><span>今天有蔬菜水果</span></label></li>
+<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天有走路或运动</span></label></li>
+<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>刷牙＋清牙缝</span></label></li>
+<li class="person-check" data-task="coffee"><label><input type="checkbox"><span>下午2点后没喝咖啡因</span></label></li>
+<li class="person-check" data-task="sleep"><label><input type="checkbox"><span>24:00前睡觉</span></label></li>
+</ul>
+<h3>近期事项</h3>
+<ul>
+<li>牙齿治疗按计划继续</li>
+<li>给妈妈补买 DHC 大豆异黄酮エクオール</li>
+</ul>
+</div></details>
+
+<details class="nested-panel"><summary>晨晨｜每日打卡</summary>
+<div class="person-box" data-person="chenchen">
+<h3>今天照着做</h3>
+<ul>
+<li class="person-check" data-task="nosugar"><label><input type="checkbox"><span>不喝含糖饮料</span></label></li>
+<li class="person-check" data-task="veg"><label><input type="checkbox"><span>今天有蔬菜水果</span></label></li>
+<li class="person-check" data-task="move"><label><input type="checkbox"><span>今天有走路或运动</span></label></li>
+<li class="person-check" data-task="teeth"><label><input type="checkbox"><span>刷牙＋清牙缝</span></label></li>
 <li class="person-check" data-task="sleep"><label><input type="checkbox"><span>23:00前睡觉</span></label></li>
-<li class="person-check" data-task="eyes"><label><input type="checkbox"><span>注意用眼与近视复查</span></label></li>
-<li class="person-check" data-task="job"><label><input type="checkbox"><span>求职期间注意账号安全和诈骗</span></label></li>
-</ul></div></details>
+</ul>
+<h3>近期事项</h3>
+<ul>
+<li>近视定期复查、注意用眼</li>
+<li>求职期间注意账号安全和诈骗</li>
+</ul>
+</div></details>
+
 </div>
 </div></details>
 </section>
@@ -210,16 +226,7 @@
 </div>
 </details>
 
-<details class="top-panel" id="less-food">
-<summary>⚠️ 少吃 / 不建议常吃</summary>
-<div class="panel-body">
-<article class="entry"><div class="entry-main"><div class="entry-title">含糖饮料</div><div class="plain">可乐、奶茶、甜饮料尽量不喝。白水和无糖茶优先。</div></div></article>
-<article class="entry"><div class="entry-main"><div class="entry-title">加工肉</div><div class="plain">香肠、腊肠、腊肉、火腿、培根、午餐肉尽量少买，尤其不要天天吃。</div></div></article>
-<article class="entry"><div class="entry-main"><div class="entry-title">高盐食物</div><div class="plain">咸菜、腌菜、腊味、重口味火锅底料、方便面汤、很多酱料都容易盐过量。爸爸有高血压和结石史，更要少。</div></div></article>
-<article class="entry"><div class="entry-main"><div class="entry-title">超加工零食</div><div class="plain">薯片、糕点、速食、甜点不用完全禁，但不要成为日常主食或每天零食。</div></div></article>
-<article class="entry"><div class="entry-main"><div class="entry-title">猪油、黄油</div><div class="plain">做饭以常见植物油为主，不需要为了“养生”频繁换油。油本身也要控制量。</div></div></article>
-</div>
-</details>
+
 
 <details class="top-panel" id="dad-food">
 <summary>👨 爸爸额外注意</summary>
@@ -239,6 +246,16 @@
 </div>
 </details>
 
+<details class="top-panel" id="less-food">
+<summary>⚠️ 少吃 / 不建议常吃</summary>
+<div class="panel-body">
+<article class="entry"><div class="entry-main"><div class="entry-title">含糖饮料</div><div class="plain">可乐、奶茶、甜饮料尽量不喝。白水和无糖茶优先。</div></div></article>
+<article class="entry"><div class="entry-main"><div class="entry-title">加工肉</div><div class="plain">香肠、腊肠、腊肉、火腿、培根、午餐肉尽量少买，尤其不要天天吃。</div></div></article>
+<article class="entry"><div class="entry-main"><div class="entry-title">高盐食物</div><div class="plain">咸菜、腌菜、腊味、重口味火锅底料、方便面汤、很多酱料都容易盐过量。爸爸有高血压和结石史，更要少。</div></div></article>
+<article class="entry"><div class="entry-main"><div class="entry-title">超加工零食</div><div class="plain">薯片、糕点、速食、甜点不用完全禁，但不要成为日常主食或每天零食。</div></div></article>
+<article class="entry"><div class="entry-main"><div class="entry-title">猪油、黄油</div><div class="plain">做饭以常见植物油为主，不需要为了“养生”频繁换油。油本身也要控制量。</div></div></article>
+</div>
+</details>
 <details class="top-panel" id="recurring-buy">
 <summary>📦 定期补给</summary>
 <div class="panel-body">
